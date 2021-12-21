@@ -1,0 +1,201 @@
+@use "./base/reset";
+@use "./base/fonts" as *;
+@use "./base/variables" as *;
+@use "./base/responsive";
+
+body {
+  background-color: $Light_grayish_cyan;
+}
+
+header {
+  margin: 163px auto 88px auto;
+  content: url(./images/logo.svg);
+}
+main {
+  width: 90%;
+  background-color: $Lighter_grayish_cyan;
+  max-width: 920px;
+  margin: auto;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+section {
+  width: 90%;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  &.input_column {
+    display: flex;
+    background-color: none;
+    max-width: 380px;
+    border-radius: 14px;
+    margin-right: 14px;
+    & form {
+      border: 2px solid $Lighter_dark_grayish_cyan;
+      border-radius: 5px;
+      position: relative;
+      margin-bottom: 35px;
+      &:after {
+        content: url(./images/icon-dollar.svg);
+        display: block;
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 20px;
+      }
+      &:hover {
+        border-color: $Bright_cyan;
+      }
+      & :focus {
+        outline: none;
+      }
+    }
+    & .input {
+      width: 100%;
+      min-height: 44px;
+      border-style: none;
+      border-radius: 3px;
+      background-color: $Lighter_grayish_cyan;
+      text-align: right;
+      padding-right: 20px;
+      @include font(auto, 20px, auto, auto, 700);
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    & h2 {
+      margin: 15px 0 5px 0;
+      @include font(auto, 14px, 25px, $Dark_grayish_cyan, 700);
+    }
+    & .buttons .btns {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 14px;
+      column-gap: 16px;
+      margin-bottom: 40px;
+    }
+    & button {
+      width: 115px;
+      height: 48px;
+      border-radius: 5px;
+      background-color: $Very_dark_cyan;
+      @include font(auto, 20px, auto, $Lighter_grayish_cyan, 700);
+      border-style: none;
+      &.active {
+        background-color: $Bright_cyan;
+        border-color: $Very_dark_cyan;
+        color: $Very_dark_cyan;
+      }
+      &:hover {
+        background-color: $Bright_cyan;
+        color: $Very_dark_cyan;
+        border-color: $Lighter_dark_grayish_cyan;
+        cursor: pointer;
+      }
+    }
+    & .form__input__percent {
+      width: 115px;
+      height: 48px;
+      border-radius: 5px;
+      background-color: $Very_dark_cyan;
+      border-style: none;
+      &:after {
+        content: none;
+      }
+      & .input__percent {
+        width: 115px;
+        height: 48px;
+        background-color: transparent;
+        border-style: none;
+        border-radius: 5px;
+        text-align: center;
+        @include font(auto, 20px, auto, $Lighter_grayish_cyan, 700);
+      }
+      & :focus {
+        background-color: $Light_grayish_cyan;
+        @include font(auto, 20px, auto, $Dark_grayish_cyan, 700);
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: $Bright_cyan;
+        color: $Very_dark_cyan;
+      }
+    }
+    & .people form {
+      border: 2px solid $Lighter_dark_grayish_cyan;
+      border-radius: 5px;
+      position: relative;
+      & .input__people {
+        width: 100%;
+        min-height: 44px;
+        border-style: none;
+        border-radius: 3px;
+        background-color: $Lighter_grayish_cyan;
+        text-align: right;
+        padding-right: 20px;
+        @include font(auto, 20px, auto, $Very_dark_cyan, 700);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &:after {
+        content: url(./images/icon-person.svg);
+        display: block;
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 20px;
+      }
+      &:hover {
+        border-color: $Bright_cyan;
+      }
+      & textarea:focus,
+      input:focus {
+        outline: none;
+      }
+    }
+  }
+  &.output {
+    background-color: $Very_dark_cyan;
+    max-width: 413px;
+    width: 50%;
+    padding: 63px 41px;
+    & .columns {
+      display: flex;
+      justify-content: space-between;
+      & .text {
+        & h2 {
+          @include font(auto, 12px, auto, $Light_grayish_cyan, 700);
+          margin-bottom: 5px;
+          letter-spacing: 1px;
+        }
+        & p {
+          letter-spacing: 1px;
+          @include font(auto, 11px, auto, $Dark_grayish_cyan, 700);
+          margin-bottom: 60px;
+        }
+      }
+      & .price p {
+        @include font(auto, 34px, 25px, $Bright_cyan, 700);
+        margin: 7px 0 60px 0;
+      }
+    }
+    & button {
+      margin: auto 0 -15px 0;
+      border-radius: 5px;
+      border-style: none;
+      text-transform: uppercase;
+      background-color: $Light_grayish_cyan;
+      @include font(sans-serif, 14px, auto, $Very_dark_cyan, 700);
+      max-width: 330px;
+      min-height: 50px;
+      width: 100%;
+      opacity: 50%;
+      &:hover {
+        opacity: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}

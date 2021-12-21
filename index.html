@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fooi-calculator</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="input_column">
+        <div class="price">
+          <h2>Bill</h2>
+          <form class="form__input__price">
+            <input type="text" placeholder="0" class="input" />
+          </form>
+        </div>
+        <div class="buttons">
+          <h2 class="tip">Select Tip %</h2>
+          <div class="btns">
+            <button>5%</button>
+            <button>10%</button>
+            <button class="active">15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <form class="form__input__percent">
+              <input type="text" placeholder="Custom" class="input__percent" />
+            </form>
+          </div>
+        </div>
+        <div class="people">
+          <h2>Number of People</h2>
+          <form class="form__input__people">
+            <input type="text" placeholder="0" class="input__people" />
+          </form>
+        </div>
+      </section>
+      <section class="output">
+        <div class="columns">
+          <div class="text">
+            <ul>
+              <li><h2>Tip Amount</h2></li>
+              <li><p>/ person</p></li>
+            </ul>
+            <ul>
+              <li><h2>Total</h2></li>
+              <li><p>/ person</p></li>
+            </ul>
+          </div>
+          <div class="price">
+            <p>$ 0.00</p>
+            <p>$ 0.00</p>
+          </div>
+        </div>
+        <button>reset</button>
+      </section>
+    </main>
+  </body>
+</html>
